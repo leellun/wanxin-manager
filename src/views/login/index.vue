@@ -49,9 +49,11 @@
 
 <script>
   import { validUsername } from '@/utils/validate'
+  import SvgIcon from '@/components/SvgIcon'
 
   export default {
     name: 'Login',
+    components:{SvgIcon},
     data() {
       const validateUsername = (rule, value, callback) => {
         if (!validUsername(value)) {
@@ -73,7 +75,7 @@
           password: '',
           grant_type: 'password',
           client_id:'wanxin-p2p-web-admin',
-          client_secret:'itcastb',
+          client_secret:'secret',
           domain:'b',
           authenticationType:'password'
         },
